@@ -2,6 +2,7 @@
   "name": "portfolio-start",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Roman160784.github.io/portfolio",
   "dependencies": {
     "@babel/core": "7.16.0",
     "@emailjs/browser": "^3.11.0",
@@ -77,6 +78,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
+    "clean": "gh-pages-clean",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
@@ -99,7 +103,8 @@
   },
   "devDependencies": {
     "@types/styled-components": "5.1.26",
-    "babel-plugin-styled-components": "2.0.7"
+    "babel-plugin-styled-components": "2.0.7",
+    "gh-pages": "^6.1.1"
   },
   "jest": {
     "roots": [
